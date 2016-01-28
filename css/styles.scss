@@ -11,12 +11,28 @@ $color3: rgb(35, 34, 37);
   height: 100%;
 }
 header {
+    .pre_nav{
+        // height: 100px;
+
+    }
+    #main-navbar{
+        background:url('../svg/bricks.svg');
+        margin-bottom: 0;
+        li{
+            font-size: 2em;
+            width: 200px;
+            text-align: center;
+        }
+
+    }
+
+
   nav {
-    position: relative;
-    text-align: center;
-    height: 186px;
-    background: url(../svg/bricks-1.svg);
-    font-size: 2em;
+  //   position: relative;
+  //   text-align: center;
+  //   height: 186px;
+  //   background: url(../svg/bricks-1.svg);
+  //   font-size: 2em;
     [class*="col-"] {
       margin-top: 2%;
     }
@@ -164,10 +180,10 @@ header {
   background: url("../svg/res_back.svg") ;
   .container {
     .row {
-      [class*='col-'] {
-        // height: 1200px;
-        padding: 0;
-      }
+    //   [class*='col-'] {
+    //     // height: 1200px;
+    //     padding: 0;
+    //   }
       img {
         position: absolute;
       }
@@ -280,8 +296,12 @@ footer {
 /* Custom, iPhone Retina */
    @media only screen and (min-width : 320px) {
      header{
-       nav{
-           height: 105px;
+       #main-navbar{
+           background-repeat: repeat;
+           li{
+               font-size: 1em;
+            //    background-color: #eee;
+           }
 
        }
        .divider-1{
@@ -298,7 +318,7 @@ footer {
        }
        .container{
          .working-Status{
-           top:28%;
+           top:35%;
            left:50%;
            -webkit-transform: translateX(-50%);
                    transform: translateX(-50%);
@@ -320,19 +340,20 @@ footer {
         background-image: url("../svg/2scrollLeft-01.svg");
         background-size: cover;
         ul{
+            margin: 30% -10px;
           li{
             font-size: 2em;
           }
         }
       }
       .reservation{
-        height: 450px;
-        background-size: auto 450px;
+        height: 400px;
+        background-size: auto 400px;
         img{
           height: auto;
           width: 65%;
           left: 50%;
-          height: 450px;
+          height: 400px;
           -webkit-transform: translateX(-50%);
                   transform: translateX(-50%);
 
@@ -343,12 +364,12 @@ footer {
               height: auto;
               width: 8%;
               left: 50%;
-              top:205px;
+              top:187px;
             }
             #reservation-info{
-              font-size: 0.9em;
-              width: 118px;
-              top: 255px;
+              font-size: 0.8em;
+              width: 90px;
+              top: 240px;
               left: 50%;
               -webkit-transform: translateX(-50%);
                       transform: translateX(-50%);
@@ -357,20 +378,20 @@ footer {
         }
       }
       .hands-up{
-        height: 450px;
+        height: 350px;
         .container{
-          height: 450px;
+          height: 350px;
           .row{
             img{
               width: 100%;
-              margin-top:175px;
+              margin-top:110px;
             }
           }
         }
       }
       footer{
         height: 410px;
-        background-size: auto 450px;
+        background-size: auto 490px;
         .container{
           .row{
             img{
@@ -398,10 +419,19 @@ footer {
       .gradient{
         background-size: 10%;
       }
+      #main-navbar li{
+          width: 115px;
+          font-size: 1em;
+          margin-top: 6px;
+          a{
+              margin-top: 0;
+          }
+      }
     }
     #static{
       right: -5%;
     }
+
     .content-menu{
       #sd,#ft{
         li{
@@ -409,10 +439,16 @@ footer {
           font-size: 2em;
         }
       }
+      #sd{
+          padding-left: 20px;
+      }
+      #ft{
+          padding-left: 0;
+      }
       }
       .reservation{
-        height: 1200px;
-        background-size: auto 1200px;
+        height: 800px;
+        background-size: auto 800px;
         #reservation-info{
           left: 50%;
           -webkit-transform: translateX(-50%);
@@ -426,7 +462,7 @@ footer {
         .container{
           .row{
             img{
-              height: 1200px;
+              height: 800px;
             }
           }
         }
@@ -442,7 +478,7 @@ footer {
       }
       footer{
         background-size: auto 755px;
-        background-position: right;
+        // background-position: right;
         height: 640px;
         .container{
           .row{
@@ -455,9 +491,10 @@ footer {
 
       .obj-zone{
         .container{
-          .working-Status{
-            top:38%;
-          }
+            .working-Status{
+                top:43%;
+                left: 51%;
+            }
           .row {
             [class*='zone-'] {
               height: 582px;
@@ -499,12 +536,12 @@ footer {
     .container{
       .row{
         #reservation-info{
-          font-size: 2em;
-          width: 250px;
-          top:675px;
+          font-size: 1.5em;
+          width: 185px;
+          top:480px;
         }
         #flower{
-          top:575px;
+          top:360px;
         }
       }
     }
@@ -516,6 +553,11 @@ footer {
    /* Medium Devices, Desktops */
    @media only screen and (min-width : 992px) {
       header{
+          #main-navbar li{
+              font-size: 2em;
+             width: 250px;
+             margin-top: 40px;
+          }
         .divider-1 {
           height: 35px;
           width: 100%;
@@ -564,19 +606,52 @@ footer {
           }
         }
       }
+      .obj-zone{
+        .container{
+          .working-Status{
+            top:43%;
+            left: 50%;
+          }
+      }
+  }
+  .content-menu{
+      #ft,#sd{
+          li{
+              font-size:3em;
+          }
+      }
+      #ft{
+          li{
+              text-align: left;
+          }
+      }
+      #sd{
+          li{
+              text-align: right;
+          }
+      }
+  }
       .reservation{
+          height: 1000px;
+          background-size: auto 1000px;
         img{
           width: 85%;
         }
         .container{
           .row{
+              img{
+                  height: 1000px;
+              }
+              .windows{
+                  height: 90%;
+              }
             [class*='col-']{
-              height: 1200px;
+              height: 1000px;
             }
             #reservation-info{
               font-size: 2em;
               width: 210px;
-              top: 56%;
+              top: 59%;
             }
             #flower{
               width: 10%;
@@ -603,7 +678,8 @@ footer {
         }
       }
       footer{
-        background-position: center;
+        background-position: top;
+        background-size: auto 120%;
       }
    }
 
